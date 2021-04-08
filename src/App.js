@@ -25,26 +25,22 @@ function App() {
 
   > This is a block quote
 
-  ![logo](./logo512.png "Logo")
+  Here's an image
+  
+  ![logo](./logo192.png "Logo")
 
   And last but not least, here is some __bolded text__
-`);
+  `);
 
   const [html, setHtml] = useState(() => marked(markdown));
 
   const preview = useRef();
 
-  useEffect(() => {
-    setHtml(marked(markdown));
-  }, [markdown]);
+  const handleChange = evt => setMarkdown(evt.target.value);
 
-  useEffect(() => {
-    preview.current.innerHTML = html;
-  }, [html]);
+  useEffect(() => setHtml(marked(markdown)), [markdown]);
 
-  const handleChange = evt => {
-    setMarkdown(markdown => evt.target.value);
-  };
+  useEffect(() => (preview.current.innerHTML = html), [html]);
 
   return (
     <div className="App">
