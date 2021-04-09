@@ -1,0 +1,30 @@
+.window {
+  border-radius: 6px;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+}
+
+.window__heading {
+  padding-left: 1rem;
+  position: relative;
+
+  background-color: var(--light-blue);
+  border-radius: 6px 6px 0 0;
+
+  font-family: 'Audiowide', cursive;
+}
+
+.window__icon {
+  position: absolute;
+  right: 1rem;
+}
+
+.window__textarea {
+  margin-bottom: -10px;
+  background-color: var(--dark-blue);
+  border: none;
+  color: #fff;
+  height: 100%;
+  width: 100%;
+  min-height: 20rem;
+  resize: vertical;
+}

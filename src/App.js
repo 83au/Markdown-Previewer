@@ -1,7 +1,7 @@
 import {useState, useEffect, useRef} from 'react';
 import Editor from './Editor';
 import marked from 'marked';
-import './App.css';
+import './styles/App.css';
 
 function App() {
   const [markdown, setMarkdown] = useState(`
@@ -45,7 +45,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Markdown Previewer</h1>
+      <h1 className="App__heading">Markdown Previewer</h1>
       <Editor markdown={markdown} onChange={handleChange} />
       <div id="preview" ref={preview}></div>
     </div>

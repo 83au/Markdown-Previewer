@@ -1,0 +1,22 @@
+:root {
+  --light-blue: hsl(200, 100%, 80%);
+  --medium-blue: hsl(210, 50%, 50%);
+  --dark-blue: hsl(220, 50%, 20%);
+}
+
+html {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  line-height: 1.7;
+}
+
+body {
+  background-color: var(--medium-blue);
+  width: 100vw;
+  min-height: 100vh;
+}
