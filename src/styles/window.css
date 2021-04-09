@@ -1,10 +1,9 @@
 .window {
-  margin: 0 auto;
+  margin: 1rem auto;
   border-radius: 6px;
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.7);
   width: 50%;
   max-width: 70rem;
-  border: 1px solid red;
 }
 
 .window__heading {
@@ -24,11 +23,21 @@
 
 .window__textarea {
   margin-bottom: -10px;
+  padding-left: 2rem;
   background-color: var(--dark-blue);
   border: none;
   color: #fff;
   height: 100%;
   width: 100%;
   min-height: 20rem;
+}
+
+textarea {
   resize: vertical;
+}
+
+.window__textarea pre,
+.window__textarea code {
+  background-color: white;
+  color: black;
 }

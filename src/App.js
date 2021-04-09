@@ -1,5 +1,6 @@
 import {useState, useEffect, useRef} from 'react';
 import Editor from './Editor';
+import Preview from './Preview';
 import marked from 'marked';
 import './styles/App.css';
 
@@ -47,7 +48,7 @@ function App() {
     <div className="App">
       <h1 className="App__heading">Markdown Previewer</h1>
       <Editor markdown={markdown} onChange={handleChange} />
-      <div id="preview" ref={preview}></div>
+      <Preview preview={preview} />
     </div>
   );
 }
