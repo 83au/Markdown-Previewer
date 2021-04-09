@@ -1,6 +1,10 @@
 .window {
+  margin: 0 auto;
   border-radius: 6px;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+  width: 50%;
+  max-width: 70rem;
+  border: 1px solid red;
 }
 
 .window__heading {
