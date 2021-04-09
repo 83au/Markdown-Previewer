@@ -1,9 +1,16 @@
-import React from 'react';
+import {useRef} from 'react';
 import './styles/window.css';
 
 function Editor({markdown, onChange}) {
+  const window = useRef();
+
+  // const expand = () => {
+  //   window.current.style.width = '100vw';
+  //   window.current.style.height = '100vh';
+  // };
+
   return (
-    <div className="window">
+    <div className="window" ref={window}>
       <h2 className="window__heading">
         Editor
         <span className="window__icon">

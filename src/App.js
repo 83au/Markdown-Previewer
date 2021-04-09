@@ -1,40 +1,20 @@
 import {useState, useEffect, useRef} from 'react';
 import Editor from './Editor';
 import Preview from './Preview';
+import initialMarkdown from './initialMarkdown';
 import marked from 'marked';
+
 import './styles/App.css';
 
 function App() {
-  const [markdown, setMarkdown] = useState(`
-  # Welcome to my Markdown Previewer!
+  const [markdown, setMarkdown] = useState(initialMarkdown);
 
-  ## This is a subheading...
-
-  [This is a project for FreeCodeCamp](https://www.freecodecamp.org/learn/front-end-libraries/front-end-libraries-projects/build-a-markdown-previewer)
-
-  Here's some code: \`<div></div>\`
-
-  Here's some more code:
-
-  \`\`\`javascript
-  const greeting = 'Hello from markdown!';
-  alert(greeting);
-  \`\`\`
-
-  - This is a list item
-  
-  1. This is a numbered list item
-
-  > This is a block quote
-
-  Here's an image
-  
-  ![logo](./logo192.png "Logo")
-
-  And last but not least, here is some __bolded text__
-  `);
-
-  const [html, setHtml] = useState(() => marked(markdown));
+  const [html, setHtml] = useState(() =>
+    marked(markdown, {
+      breaks: true,
+      gfm: true,
+    })
+  );
 
   const handleChange = evt => setMarkdown(evt.target.value);
 

@@ -7,3 +7,24 @@
   text-align: center;
   font-family: 'Audiowide', cursive;
 }
+
+li {
+  margin-left: 2rem;
+}
+
+blockquote p {
+  position: relative;
+  padding-left: 1rem;
+  line-height: 2;
+}
+
+blockquote p::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  content: '';
+  height: 2em;
+  width: 5px;
+  background-color: hsl(180, 50%, 30%);
+}

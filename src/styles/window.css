@@ -19,6 +19,7 @@
 .window__icon {
   position: absolute;
   right: 1rem;
+  cursor: pointer;
 }
 
 .window__textarea {
@@ -30,6 +31,7 @@
   height: 100%;
   width: 100%;
   min-height: 20rem;
+  outline: none;
 }
 
 textarea {
