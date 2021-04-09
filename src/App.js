@@ -9,12 +9,12 @@ import './styles/App.css';
 function App() {
   const [markdown, setMarkdown] = useState(initialMarkdown);
 
-  const [html, setHtml] = useState(() =>
-    marked(markdown, {
-      breaks: true,
-      gfm: true,
-    })
-  );
+  marked.setOptions({
+    breaks: true,
+    gfm: true,
+  });
+
+  const [html, setHtml] = useState(() => marked(markdown));
 
   const handleChange = evt => setMarkdown(evt.target.value);
 
