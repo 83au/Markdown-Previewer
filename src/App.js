@@ -1,4 +1,5 @@
 import {useState, useEffect, useRef} from 'react';
+import Editor from './Editor';
 import marked from 'marked';
 import './App.css';
 
@@ -34,9 +35,9 @@ function App() {
 
   const [html, setHtml] = useState(() => marked(markdown));
 
-  const preview = useRef();
-
   const handleChange = evt => setMarkdown(evt.target.value);
+
+  const preview = useRef();
 
   useEffect(() => setHtml(marked(markdown)), [markdown]);
 
@@ -45,15 +46,7 @@ function App() {
   return (
     <div className="App">
       <h1>Markdown Previewer</h1>
-      <textarea
-        name="editor"
-        id="editor"
-        cols="30"
-        rows="10"
-        onChange={handleChange}
-      >
-        {markdown}
-      </textarea>
+      <Editor markdown={markdown} onChange={handleChange} />
       <div id="preview" ref={preview}></div>
     </div>
   );
