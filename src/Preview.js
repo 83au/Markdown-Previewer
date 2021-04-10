@@ -1,14 +1,15 @@
-import {useState} from 'react';
+import { useState } from 'react';
 import './styles/window.css';
 
-function Preview({preview}) {
+function Preview({ preview }) {
   const [expand, setExpand] = useState(false);
   const handleClick = () => setExpand(!expand);
 
   let styles;
   if (expand) {
     styles = {
-      position: 'absolute',
+      position: 'fixed',
+      top: '-1rem',
       zIndex: '10',
       maxWidth: '100vw',
       width: '100%',
@@ -23,7 +24,10 @@ function Preview({preview}) {
       <h2 className="window__heading">
         Preview
         <span className="window__icon" onClick={handleClick}>
-          <i className="fa fa-arrows-alt" aria-hidden="true"></i>
+          <i
+            className={`fa ${expand ? 'fa-compress' : 'fa-arrows-alt'}`}
+            aria-hidden="true"
+          ></i>
         </span>
       </h2>
       <div id="preview" className="window__textarea" ref={preview}></div>
