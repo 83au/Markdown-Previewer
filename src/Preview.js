@@ -1,12 +1,28 @@
-import React from 'react';
+import {useState} from 'react';
 import './styles/window.css';
 
 function Preview({preview}) {
+  const [expand, setExpand] = useState(false);
+  const handleClick = () => setExpand(!expand);
+
+  let styles;
+  if (expand) {
+    styles = {
+      position: 'absolute',
+      zIndex: '10',
+      maxWidth: '100vw',
+      width: '100%',
+      height: '100%',
+    };
+  } else {
+    styles = {};
+  }
+
   return (
-    <div className="window">
+    <div className="window" style={styles}>
       <h2 className="window__heading">
         Preview
-        <span className="window__icon">
+        <span className="window__icon" onClick={handleClick}>
           <i className="fa fa-arrows-alt" aria-hidden="true"></i>
         </span>
       </h2>

@@ -3,6 +3,7 @@
   border-radius: 6px;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.7);
   width: 50%;
+  /* height: 20rem; */
   max-width: 70rem;
 }
 
@@ -31,6 +32,7 @@
   height: 100%;
   width: 100%;
   min-height: 20rem;
+  overflow: scroll;
   outline: none;
 }
 

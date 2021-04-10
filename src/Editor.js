@@ -1,19 +1,30 @@
-import {useRef} from 'react';
+import {useState, useRef} from 'react';
 import './styles/window.css';
 
 function Editor({markdown, onChange}) {
+  const [expand, setExpand] = useState(false);
   const window = useRef();
 
-  // const expand = () => {
-  //   window.current.style.width = '100vw';
-  //   window.current.style.height = '100vh';
-  // };
+  let styles;
+  if (expand) {
+    styles = {
+      position: 'absolute',
+      zIndex: '10',
+      maxWidth: '100vw',
+      width: '100%',
+      height: '100%',
+    };
+  } else {
+    styles = {};
+  }
+
+  const handleClick = () => setExpand(!expand);
 
   return (
-    <div className="window" ref={window}>
+    <div className="window" ref={window} style={styles}>
       <h2 className="window__heading">
         Editor
-        <span className="window__icon">
+        <span className="window__icon" onClick={handleClick}>
           <i className="fa fa-arrows-alt" aria-hidden="true"></i>
         </span>
       </h2>
