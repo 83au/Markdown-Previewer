@@ -1,11 +1,11 @@
-import { useState, useEffect, useRef } from 'react';
-import DOMPurify from 'dompurify';
-import Editor from './Editor';
-import Preview from './Preview';
-import initialMarkdown from './initialMarkdown';
-import marked from 'marked';
+import { useState, useEffect, useRef } from "react";
+import DOMPurify from "dompurify";
+import Editor from "./Editor";
+import Preview from "./Preview";
+import initialMarkdown from "./initialMarkdown";
+import marked from "marked";
 
-import './styles/App.css';
+import "./styles/App.css";
 
 /* TODO: 
   Editor and Preview components are too similar. Use composition to create 1 component and configure it with props
@@ -21,7 +21,7 @@ function App() {
 
   const [html, setHtml] = useState(() => marked(markdown));
 
-  const handleChange = evt => setMarkdown(evt.target.value);
+  const handleChange = (evt) => setMarkdown(evt.target.value);
 
   const preview = useRef();
 

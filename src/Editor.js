@@ -1,5 +1,5 @@
-import { useState, useRef } from 'react';
-import './styles/window.css';
+import { useState, useRef } from "react";
+import "./styles/window.css";
 
 function Editor({ markdown, onChange }) {
   const [expand, setExpand] = useState(false);
@@ -8,12 +8,12 @@ function Editor({ markdown, onChange }) {
   let styles;
   if (expand) {
     styles = {
-      position: 'absolute',
-      top: '-1rem',
-      zIndex: '10',
-      maxWidth: '100vw',
-      width: '100%',
-      height: '100%',
+      position: "absolute",
+      top: "-1rem",
+      zIndex: "10",
+      maxWidth: "100vw",
+      width: "100%",
+      height: "100%",
     };
   } else {
     styles = {};
@@ -27,7 +27,7 @@ function Editor({ markdown, onChange }) {
         Editor
         <span className="window__icon" onClick={handleClick}>
           <i
-            className={`fa ${expand ? 'fa-compress' : 'fa-arrows-alt'}`}
+            className={`fa ${expand ? "fa-compress" : "fa-arrows-alt"}`}
             aria-hidden="true"
           ></i>
         </span>
