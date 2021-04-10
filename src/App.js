@@ -1,4 +1,5 @@
 import {useState, useEffect, useRef} from 'react';
+import DOMPurify from 'dompurify';
 import Editor from './Editor';
 import Preview from './Preview';
 import initialMarkdown from './initialMarkdown';
@@ -22,7 +23,10 @@ function App() {
 
   useEffect(() => setHtml(marked(markdown)), [markdown]);
 
-  useEffect(() => (preview.current.innerHTML = html), [html]);
+  useEffect(() => {
+    const cleanHtml = DOMPurify.sanitize(html, {USE_PROFILES: {html: true}});
+    preview.current.innerHTML = cleanHtml;
+  }, [html]);
 
   return (
     <div className="App">
