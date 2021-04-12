@@ -39,3 +39,8 @@ textarea {
   resize: vertical;
 }
 
+@media only screen and (max-width: 1000px) {
+  .Window {
+    width: 100%;
+  }
+}
