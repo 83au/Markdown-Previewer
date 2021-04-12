@@ -1,4 +1,4 @@
-.window {
+.Window {
   margin: 1rem auto;
   border-radius: 6px;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.7);
@@ -6,7 +6,7 @@
   max-width: 70rem;
 }
 
-.window__heading {
+.Window__heading {
   padding-left: 1rem;
   position: relative;
 
@@ -16,15 +16,15 @@
   font-family: 'Audiowide', cursive;
 }
 
-.window__icon {
+.Window__icon {
   position: absolute;
   right: 1rem;
   cursor: pointer;
 }
 
-.window__textarea {
+.Window__textarea {
   margin-bottom: -10px;
-  padding-left: 2rem;
+  padding: 1rem 2rem;
   background-color: var(--dark-blue);
   border: none;
   color: #fff;
@@ -39,8 +39,3 @@ textarea {
   resize: vertical;
 }
 
-.window__textarea pre,
-.window__textarea code {
-  background-color: white;
-  color: black;
-}

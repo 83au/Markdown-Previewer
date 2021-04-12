@@ -1,0 +1,41 @@
+#Preview {
+  background-color: #efefef;
+  color: #111;
+  font-family: sans-serif;
+}
+
+#Preview > * {
+  margin: 1rem 0;
+}
+
+#Preview h1 {
+  border-bottom: 4px solid rgba(0, 0, 0, .5);
+}
+
+#Preview pre,
+#Preview code {
+  padding: 5px;
+  background-color: #111;
+  color: #eee;
+}
+
+#Preview li {
+  margin-left: 2rem;
+}
+
+#Preview blockquote p {
+  position: relative;
+  padding-left: 1rem;
+  line-height: 2;
+}
+
+#Preview blockquote p::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  content: '';
+  height: 2em;
+  width: 5px;
+  background-color: hsl(180, 50%, 30%);
+}

@@ -1,27 +1,26 @@
-import { useState, useEffect, useRef } from "react";
-import DOMPurify from "dompurify";
-import Editor from "./Editor";
-import Preview from "./Preview";
-import initialMarkdown from "./initialMarkdown";
-import marked from "marked";
+import { useState, useEffect, useRef } from 'react';
+import marked from 'marked';
+import DOMPurify from 'dompurify';
 
-import "./styles/App.css";
+import Window from './Window';
+import Editor from './Editor';
+import Preview from './Preview';
+import initialMarkdown from './initialMarkdown';
 
-/* TODO: 
-  Editor and Preview components are too similar. Use composition to create 1 component and configure it with props
-*/
+import './styles/App.css';
+
 
 function App() {
-  const [markdown, setMarkdown] = useState(initialMarkdown);
+  const [ markdown, setMarkdown ] = useState(initialMarkdown);
 
   marked.setOptions({
     breaks: true,
     gfm: true,
   });
 
-  const [html, setHtml] = useState(() => marked(markdown));
+  const [ html, setHtml ] = useState(() => marked(markdown));
 
-  const handleChange = (evt) => setMarkdown(evt.target.value);
+  const handleChange = evt => setMarkdown(evt.target.value);
 
   const preview = useRef();
 
@@ -37,8 +36,12 @@ function App() {
   return (
     <div className="App">
       <h1 className="App__heading">Markdown Previewer</h1>
-      <Editor markdown={markdown} onChange={handleChange} />
-      <Preview preview={preview} />
+      <Window title="Editor">
+        <Editor markdown={markdown} onChange={handleChange} />
+      </Window>
+      <Window title="Preview">
+        <Preview preview={preview} />
+      </Window>
     </div>
   );
 }
