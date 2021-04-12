@@ -2,7 +2,7 @@ import './styles/Preview.css';
 
 function Preview({ preview }) {
   return (
-    <div id="Preview" className="Window__textarea" ref={preview}></div>
+    <div id="preview" className="Window__textarea" ref={preview}></div>
   );
 }
 

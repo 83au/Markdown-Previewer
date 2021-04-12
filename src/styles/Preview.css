@@ -1,35 +1,45 @@
-#Preview {
+#preview {
   background-color: #efefef;
   color: #111;
   font-family: sans-serif;
 }
 
-#Preview > * {
+#preview > * {
   margin: 1rem 0;
 }
 
-#Preview h1 {
+#preview h1 {
   border-bottom: 4px solid rgba(0, 0, 0, .5);
 }
 
-#Preview pre,
-#Preview code {
-  padding: 5px;
+#preview h2,
+#preview h3 {
+  border-bottom: 2px solid rgba(0, 0, 0, .5);
+}
+
+#preview h4,
+#preview h5,
+#preview h6 {
+  border-bottom: 1px solid rgba(0, 0, 0, .5);
+}
+
+#preview pre,
+#preview code {
   background-color: #111;
   color: #eee;
 }
 
-#Preview li {
+#preview li {
   margin-left: 2rem;
 }
 
-#Preview blockquote p {
+#preview blockquote p {
   position: relative;
   padding-left: 1rem;
   line-height: 2;
 }
 
-#Preview blockquote p::before {
+#preview blockquote p::before {
   position: absolute;
   left: 0;
   top: 0;
