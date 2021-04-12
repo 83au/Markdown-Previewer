@@ -1,4 +1,3 @@
-import { useState, useRef } from "react";
 import "./styles/window.css";
 
 function Editor({ markdown, onChange }) {
