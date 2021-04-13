@@ -20,3 +20,9 @@ body {
   width: 100vw;
   min-height: 100vh;
 }
+
+@media only screen and (max-width: 650px) {
+  html {
+    font-size: 62.5%;
+  }
+}
