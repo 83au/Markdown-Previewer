@@ -1,9 +1,5 @@
 .Window {
-  margin: 1rem auto;
-  border-radius: 6px;
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.7);
-  width: 70%;
-  max-width: 70rem;
+  border: 1px solid black;
 }
 
 .Window__heading {
@@ -11,7 +7,6 @@
   position: relative;
 
   background-color: var(--light-blue);
-  border-radius: 6px 6px 0 0;
 
   font-family: 'Audiowide', cursive;
 }
@@ -36,7 +31,7 @@
 }
 
 textarea {
-  resize: vertical;
+  resize: none;
 }
 
 @media only screen and (max-width: 1000px) {

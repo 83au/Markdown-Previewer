@@ -36,12 +36,14 @@ function App() {
   return (
     <div className="App">
       <h1 className="App__heading">Markdown Previewer</h1>
-      <Window title="Editor">
-        <Editor markdown={markdown} onChange={handleChange} />
-      </Window>
-      <Window title="Preview">
-        <Preview preview={preview} />
-      </Window>
+      <div className="App__container">
+        <Window title="Editor">
+          <Editor markdown={markdown} onChange={handleChange} />
+        </Window>
+        <Window title="Preview">
+          <Preview preview={preview} />
+        </Window>
+      </div>
     </div>
   );
 }

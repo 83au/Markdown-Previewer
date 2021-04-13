@@ -2,14 +2,14 @@ import { useState } from "react";
 import "./styles/window.css";
 
 function Window({ title, children }) {
-  const [expand, setExpand] = useState(false);
+  const [ expand, setExpand ] = useState(false);
   const handleClick = () => setExpand(!expand);
 
   let styles;
   if (expand) {
     styles = {
       position: "absolute",
-      top: "-1rem",
+      top: "0",
       zIndex: "10",
       maxWidth: "100vw",
       width: "100%",
