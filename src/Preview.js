@@ -1,4 +1,4 @@
-import './styles/Preview.css';
+import './styles/css/Preview.css';
 
 function Preview({ preview }) {
   return (

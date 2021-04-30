@@ -8,12 +8,16 @@
     "@testing-library/user-event": "^12.8.3",
     "dompurify": "^2.2.7",
     "marked": "^2.0.1",
+    "node-sass-chokidar": "^1.5.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
     "web-vitals": "^1.1.1"
   },
   "scripts": {
+    "build-css": "node-sass-chokidar src/styles/sass -o src/styles/css --recursive",
+    "watch-css": "npm run build-css && node-sass-chokidar src/styles/sass -o src/styles/css --watch",
+    "prestart": "npm run build-css",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -36,5 +40,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "node-sass": "^5.0.0"
   }
 }

@@ -1,4 +1,4 @@
-import "./styles/window.css";
+import "./styles/css/window.css";
 
 function Editor({ markdown, onChange }) {
   return (

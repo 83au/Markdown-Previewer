@@ -7,18 +7,18 @@ import Editor from './Editor';
 import Preview from './Preview';
 import initialMarkdown from './initialMarkdown';
 
-import './styles/App.css';
+import './styles/css/App.css';
 
 
 function App() {
-  const [ markdown, setMarkdown ] = useState(initialMarkdown);
+  const [markdown, setMarkdown] = useState(initialMarkdown);
 
   marked.setOptions({
     breaks: true,
     gfm: true,
   });
 
-  const [ html, setHtml ] = useState(() => marked(markdown));
+  const [html, setHtml] = useState(() => marked(markdown));
 
   const handleChange = evt => setMarkdown(evt.target.value);
 

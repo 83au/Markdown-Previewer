@@ -1,0 +1,32 @@
+.Window {
+  border: 1px solid black; }
+
+.Window__heading {
+  padding-left: 1rem;
+  position: relative;
+  background-color: var(--light-blue);
+  font-family: 'Audiowide', cursive; }
+
+.Window__icon {
+  position: absolute;
+  right: 1rem;
+  cursor: pointer; }
+
+.Window__textarea {
+  margin-bottom: -10px;
+  padding: 1rem 2rem;
+  background-color: var(--dark-blue);
+  border: none;
+  color: #fff;
+  height: 100%;
+  width: 100%;
+  min-height: 20rem;
+  overflow: scroll;
+  outline: none; }
+
+textarea {
+  resize: none; }
+
+@media only screen and (max-width: 1000px) {
+  .Window {
+    width: 100%; } }
