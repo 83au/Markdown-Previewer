@@ -1,14 +1,12 @@
-import { useState, useEffect, useRef } from 'react';
-import marked from 'marked';
-import DOMPurify from 'dompurify';
+import { useState, useEffect } from "react";
+import marked from "marked";
 
-import Window from './Window';
-import Editor from './Editor';
-import Preview from './Preview';
-import initialMarkdown from './initialMarkdown';
+import Window from "./Window";
+import Editor from "./Editor";
+import Preview from "./Preview";
+import initialMarkdown from "./initialMarkdown";
 
-import './styles/css/App.css';
-
+import "./styles/css/App.css";
 
 function App() {
   const [markdown, setMarkdown] = useState(initialMarkdown);
@@ -22,16 +20,7 @@ function App() {
 
   const handleChange = evt => setMarkdown(evt.target.value);
 
-  const preview = useRef();
-
   useEffect(() => setHtml(marked(markdown)), [markdown]);
-
-  useEffect(() => {
-    const cleanHtml = DOMPurify.sanitize(html, {
-      USE_PROFILES: { html: true },
-    });
-    preview.current.innerHTML = cleanHtml;
-  }, [html]);
 
   return (
     <div className="App">
@@ -41,7 +30,7 @@ function App() {
           <Editor markdown={markdown} onChange={handleChange} />
         </Window>
         <Window title="Preview">
-          <Preview preview={preview} />
+          <Preview html={html} />
         </Window>
       </div>
     </div>
